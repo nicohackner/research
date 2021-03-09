@@ -1,0 +1,17 @@
+reset
+set terminal x11 
+show output ##
+set view map
+set nokey
+set pm3d corners2color c1
+set ticslevel 0
+
+set xtics ("-20" 0.5, "0" 20.5, "20" 39.5)
+set ytics ("-20" 0.5, "0" 20.5, "20" 39.5)
+set size square
+
+#set xlabel '{\LaTeX\ -- $x$ }'
+#set ylabel '{\LaTeX\ -- $y$ }' 
+set ylabel '{/Helevetica= 28 k_y/{/Symbol=28 p} }' 
+
+splot "potential.dat" matrix with pm3d
